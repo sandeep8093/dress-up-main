@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Button, Typography, Grid } from '@material-ui/core';
+import './app.css';
+import Navbar from './Navbar';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  const handleAdminClick = () => {
+    // Redirect to admin page hosted on Netlify
+    window.location.href = "https://admin-panel-client-u36.netlify.app/";
+  };
 
+  const handleUserClick = () => {
+    // Redirect to user page hosted on Netlify
+    window.location.href = "https://dress-up-client.netlify.app/";
+  };
+
+  return (<>
+    <Navbar />
+    <div className="container">
+      <Grid container direction="column" alignItems="center" spacing={3}>
+        <Grid item>
+          <Typography variant="h4" color='Black'>Login Page</Typography>
+        </Grid>
+        <Grid item className="card">
+          <Button variant="contained" color="primary" onClick={handleAdminClick}>
+            Enter as Admin
+          </Button>
+        </Grid>
+        <Grid item className="card">
+          <Button variant="contained" color="secondary" onClick={handleUserClick}>
+            Enter as User
+          </Button>
+        </Grid>
+      </Grid>
+    </div>
+  </>
+  );
+  }
 export default App;
