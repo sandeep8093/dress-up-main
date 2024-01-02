@@ -1,5 +1,5 @@
 Hosted on : https://dress-up-main.netlify.app/
-
+Server Repo: https://github.com/sandeep8093/dressup-server  , admin panel: https://github.com/sandeep8093/admin-panel
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
